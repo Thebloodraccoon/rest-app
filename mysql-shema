@@ -1,0 +1,12 @@
+CREATE TABLE t_order (
+                       id INT PRIMARY KEY AUTO_INCREMENT,
+                       date Date NOT NULL,
+                       cost DOUBLE NOT NULL,
+);
+
+CREATE TABLE t_product (
+                           id INT PRIMARY KEY AUTO_INCREMENT,
+                           name VARCHAR(64) NOT NULL,
+                           order_id INT NOT NULL,
+                           FOREIGN KEY (order_id) REFERENCES t_order(id) ON DELETE CASCADE
+)
