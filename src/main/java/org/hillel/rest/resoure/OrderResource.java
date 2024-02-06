@@ -44,6 +44,8 @@ public class OrderResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response createOrder(OrderDTO orderDTO) {
+        LOGGER.info("Create Order");
+        LOGGER.debug("Order id: {}", orderDTO.getId());
         OrderDTO created = orderService.createOrder(orderDTO);
 
         return Response.ok(created).build();
