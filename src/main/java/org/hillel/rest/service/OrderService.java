@@ -1,7 +1,5 @@
 package org.hillel.rest.service;
 
-import org.hillel.rest.model.Order;
-
 import org.hillel.rest.model.dto.OrderDTO;
 import org.jvnet.hk2.annotations.Contract;
 
